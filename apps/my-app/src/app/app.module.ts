@@ -4,14 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { WhateverComponentModule } from '@nx-test-project/my-lib/lib/whatever/whatever.module';
-import { FooComponentModule } from '@nx-test-project/my-lib/lib/foo/foo.module';
+import { BlueComponentModule } from './blue/blue.module';
+import { YellowComponentModule } from './yellow/yellow.module';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,
     WhateverComponentModule,
-    FooComponentModule
+    BlueComponentModule,
+    YellowComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent],

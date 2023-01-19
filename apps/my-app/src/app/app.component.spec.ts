@@ -2,7 +2,8 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { WhateverComponentModule } from '@nx-test-project/my-lib/lib/whatever/whatever.module';
-import { FooComponentModule } from '@nx-test-project/my-lib/lib/foo/foo.module';
+import { BlueComponentModule } from './blue/blue.module';
+import { YellowComponentModule } from './yellow/yellow.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -13,7 +14,8 @@ describe('AppComponent', () => {
       ],
       imports: [
         WhateverComponentModule,
-        FooComponentModule
+        BlueComponentModule,
+        YellowComponentModule,
       ]
     }).compileComponents();
   });
