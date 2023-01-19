@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-test-project/my-lib/*": ["libs/my-lib/src/*"],
+      "@nx-test-project/new-lib": ["libs/new-lib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

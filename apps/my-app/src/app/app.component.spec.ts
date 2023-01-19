@@ -1,11 +1,20 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { WhateverComponentModule } from '@nx-test-project/my-lib/lib/whatever/whatever.module';
+import { FooComponentModule } from '@nx-test-project/my-lib/lib/foo/foo.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent, NxWelcomeComponent],
+      declarations: [
+        AppComponent,
+        NxWelcomeComponent
+      ],
+      imports: [
+        WhateverComponentModule,
+        FooComponentModule
+      ]
     }).compileComponents();
   });
 
